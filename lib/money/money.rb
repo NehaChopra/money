@@ -194,6 +194,8 @@ class Money
     case style
     when :legacy_dollars, nil
       sprintf("%.2f", value)
+    when :with_currency
+      "#{value.to_s('F')} #{currency.to_s}"
     when :amount
       sprintf("%.#{currency.minor_units}f", value)
     end
