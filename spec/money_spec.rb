@@ -572,7 +572,7 @@ RSpec.describe "Money" do
 
   describe "parser dependency injection" do
     before(:each) { Money.parser = AccountingMoneyParser }
-    after(:each) { Money.parser = MoneyParser }
+    after(:each) { Money.parser = DeprecatedMoneyParser }
 
     it "keeps AccountingMoneyParser class on new money objects" do
       expect(Money.new.class.parser).to eq(AccountingMoneyParser)

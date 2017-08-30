@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-RSpec.describe MoneyParser do
+RSpec.describe DeprecatedMoneyParser do
   describe "parsing of amounts with period decimal separator" do
     it "parses an empty string to $0" do
       expect(described_class.parse("")).to eq(Money.new)

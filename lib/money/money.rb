@@ -23,8 +23,8 @@ class Money
     end
     alias_method :empty, :zero
 
-    def parse(input, currency = nil)
-      parser.parse(input, currency)
+    def parse(input)
+      parser.parse(input)
     end
 
     def from_cents(cents, currency = nil)
@@ -60,7 +60,7 @@ class Money
     end
 
     def default_settings
-      self.parser = MoneyParser
+      self.parser = DeprecatedMoneyParser
       self.default_currency = Money::NullCurrency.new
     end
   end

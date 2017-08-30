@@ -1,10 +1,11 @@
-class MoneyParser
+class DeprecatedMoneyParser
   class << self
     def parse(input, currency = nil)
       Money.new(extract_money(input.to_s), currency)
     end
 
     private
+
     def extract_money(input)
       return 0 if input.to_s.empty?
 
