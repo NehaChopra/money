@@ -36,6 +36,7 @@ RSpec.describe "Money" do
 
   it "to_s as a float with 2 decimal places" do
     expect(money.to_s).to eq("1.00")
+    expect(non_fractional_money.to_s).to eq("1")
   end
 
   it "to_s with a legacy_dollars style" do
